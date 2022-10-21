@@ -20,7 +20,6 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
-
 Bundle 'snipMate'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -38,7 +37,8 @@ Bundle 'armasm'
 Bundle 'https://github.com/dhruvasagar/vim-table-mode.git'
 "주석달기: \cc, \cn, \cs
 "다른모양 주석 설정: \ca
-"주석해제: \<space>
+"주석해제: \c<space>
+"toggle the comment state of the selected lines individually: \ci
 Bundle 'The-NERD-Commenter'
 Bundle 'AutoComplPop'
 "Bottom Bar
@@ -70,6 +70,9 @@ set incsearch
 set printoptions=portrait:n,wrap:n,duplex:off
 set fileencodings=utf-8,euc-kr
 colorscheme desert
+
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
 
 "==========================
 "= autocmd
