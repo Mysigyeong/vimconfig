@@ -234,7 +234,7 @@ let g:SrcExpl_nextDefKey = "<F4>"
 "====================================================
 "= Tag List
 "====================================================
-filetype on"vim filetpye on
+filetype on"vim filetype on
 let Tlist_Ctags_Cmd="/usr/bin/ctags"
 let Tlist_Inc_Winwidth=0
 let Tlist_Exit_OnlyWindow=0
