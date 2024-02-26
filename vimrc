@@ -77,12 +77,12 @@ nnoremap <C-Right> :tabnext<CR>
 "==========================
 "= autocmd
 "==========================
-autocmd BufEnter *.c        setlocal ts=8 sw=8 sts=8 noexpandtab
-autocmd BufEnter *.S        setlocal ts=8 sw=8 sts=8 noexpandtab
-autocmd BufEnter *.py       setlocal ts=8 sw=8 sts=8 noexpandtab
-autocmd BufEnter Makefile   setlocal ts=8 sw=8 sts=8 noexpandtab
-autocmd BufEnter .*         setlocal ts=8 sw=8 sts=8 noexpandtab nocindent
-autocmd BufEnter *.md       setlocal ts=8 sw=8 sts=8 noexpandtab nocindent
+autocmd BufEnter *.c        setlocal ts=4 sw=4 sts=4 expandtab
+autocmd BufEnter *.S        setlocal ts=4 sw=4 sts=4 expandtab
+autocmd BufEnter *.py       setlocal ts=4 sw=4 sts=4 expandtab
+autocmd BufEnter Makefile   setlocal ts=4 sw=4 sts=4 expandtab
+autocmd BufEnter .*         setlocal ts=4 sw=4 sts=4 expandtab nocindent
+autocmd BufEnter *.md       setlocal ts=4 sw=4 sts=4 expandtab nocindent
 "augroup vimrc_autocmds
 "    autocmd!
     " highlight characters past column 120
@@ -90,7 +90,7 @@ autocmd BufEnter *.md       setlocal ts=8 sw=8 sts=8 noexpandtab nocindent
     autocmd FileType python match Excess /\%120v.*/
     autocmd FileType python set nowrap
 "    augroup END
-autocmd BufEnter *.sh       setlocal ts=8 sw=8 sts=8 noexpandtab nocindent
+autocmd BufEnter *.sh       setlocal ts=4 sw=4 sts=4 expandtab nocindent
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
